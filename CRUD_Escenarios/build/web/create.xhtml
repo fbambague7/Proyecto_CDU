@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:pm="http://primefaces.org/mobile"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Gestionar Escenarios</title>
+    </h:head>
+    <h:body>
+
+        <h:form id="idcreate">
+            <p:panel id="panel" header="Gestión de Escenarios" style="margin-bottom:10px;">
+                <div class="ui-g">
+                    <div class="ui-g-8">
+                        <h3>Agregar Escenario</h3>
+                        <h:panelGrid columns="2" cellpadding="5">
+                            <h:panelGrid columns="2" cellpadding="5">
+                                <p:outputLabel for="name" value="Basic:" />
+                                <p:inputText id="name" />
+
+
+                                <p:outputLabel for="name" value="Estados:" />
+                                <p:selectOneMenu id="estate"  style="width:125px">
+                                    <f:selectItem itemLabel="Select One" itemValue="" />
+                                    <f:selectItems value="#{escenarioBean.estado}" />
+
+                                </p:selectOneMenu>
+                                <p:outputLabel for="textarea" value="Descripcion:" />
+                                <p:inputTextarea id="textarea" />
+
+
+                                <p:outputLabel for="name" value="Deporte:" />
+                                <p:selectOneMenu id="iddeporte"  style="width:125px">
+                                    <f:selectItem itemLabel="Seleccione un Deporte" itemValue="" />
+                                    <f:selectItems value="#{deporteBean.deportes}" var="deporte" itemLabel="#{deporte.nombre}" />
+                                </p:selectOneMenu>
+                                <p:outputLabel for="name" value="" />
+                                <p:commandButton value="Agregar Deporte" icon="ui-icon-search" id="create" action="#{escenarioBean.create}" styleClass="ui-priority-primary" />
+        
+                                
+                                    
+                            </h:panelGrid>
+
+                        </h:panelGrid>
+
+                    </div>
+                    <div class="ui-g-4">
+                        <h3>Agregar Escenario</h3>
+                    </div>
+                     </div>   
+            </p:panel>
+
+
+
+            
+        </h:form>
+
+        
+
+    </h:body>
+</html>
+
