@@ -150,5 +150,5 @@ public class EspacioDeportivo implements Serializable {
     public String toString() {
         return "edu.proyecto2.crud_escenarios.data.EspacioDeportivo[ idEspacio=" + idEspacio + " ]";
     }
-    
+
 }
